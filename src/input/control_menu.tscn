@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://7xev0vts35qx"]
+
+[ext_resource type="PackedScene" uid="uid://dsploal0x35ao" path="res://src/input/remapping_menu.tscn" id="1_k7jhs"]
+[ext_resource type="Script" uid="uid://d2lvo0bbp2mks" path="res://src/input/control_menu.gd" id="1_lk3gc"]
+[ext_resource type="Script" uid="uid://bs7vj8u6pghoa" path="res://src/input/mouse_sens_slider.gd" id="2_lbnb0"]
+
+[node name="ControlMenu" type="Control" unique_id=1116839675]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lk3gc")
+
+[node name="BG" type="ColorRect" parent="." unique_id=490894552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.20015648, 0.542912, 0.49265468, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="HeadingContainer" type="HBoxContainer" parent="." unique_id=1058358278]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.03549383
+offset_bottom = -23.0
+grow_horizontal = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HeadingLabel" type="Label" parent="HeadingContainer" unique_id=1461980011]
+layout_mode = 2
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="RemappingMenu" parent="." unique_id=184473727 instance=ExtResource("1_k7jhs")]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.79012346
+
+[node name="MouseSlider" type="HSlider" parent="." unique_id=1030452789]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11111111
+anchor_top = 0.83950615
+anchor_right = 0.8888889
+anchor_bottom = 0.86419755
+script = ExtResource("2_lbnb0")
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitContainer" type="HBoxContainer" parent="." unique_id=1143150541]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9382716
+anchor_right = 1.0
+anchor_bottom = 0.9876543
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" type="Button" parent="ExitContainer" unique_id=533429789]
+layout_mode = 2
+text = "Exit"
+
+[node name="MouseHeadingContainer" type="HBoxContainer" parent="." unique_id=1303922822]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11111111
+anchor_top = 0.79012346
+anchor_right = 0.8888889
+anchor_bottom = 0.83950615
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MouseHeadingContainer" unique_id=1187026099]
+layout_mode = 2
+text = "Mouse Sensitivity"
+horizontal_alignment = 1

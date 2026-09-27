@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cqlkatg5n51l3"]
+
+[ext_resource type="Script" uid="uid://3sp4bmdlcjwq" path="res://src/audio/audio_menu.gd" id="1_spjpf"]
+
+[node name="AudioMenu" type="Control" unique_id=1537966480]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_spjpf")
+metadata/_edit_use_anchors_ = true
+
+[node name="BG" type="ColorRect" parent="." unique_id=420878070]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15650406, 0.2662702, 0.5704772, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=2043938175]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HeadingContainerV" type="VBoxContainer" parent="." unique_id=144189535]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HeadContainerH" type="HBoxContainer" parent="HeadingContainerV" unique_id=438493283]
+layout_mode = 2
+alignment = 1
+
+[node name="HeadingLabel" type="Label" parent="HeadingContainerV/HeadContainerH" unique_id=1832180078]
+layout_mode = 2
+text = "Volume"
+
+[node name="ExitContainer" type="HBoxContainer" parent="." unique_id=109363643]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.9382716
+anchor_right = 1.0
+anchor_bottom = 0.9876543
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" type="Button" parent="ExitContainer" unique_id=1939980101]
+layout_mode = 2
+text = "Exit"

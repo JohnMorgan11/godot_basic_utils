@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bj74muchr8npl"]
+
+[ext_resource type="Script" uid="uid://bk8sd5n0brium" path="res://src/menus/title_menu.gd" id="1_8obhb"]
+[ext_resource type="PackedScene" uid="uid://cqlkatg5n51l3" path="res://src/audio/audio_menu.tscn" id="2_7w2fj"]
+[ext_resource type="PackedScene" uid="uid://7xev0vts35qx" path="res://src/input/control_menu.tscn" id="3_4bx7u"]
+[ext_resource type="PackedScene" uid="uid://6k44a4j85xrj" path="res://src/audio/music_player.tscn" id="4_watub"]
+[ext_resource type="AudioStream" uid="uid://dcj1jkplxdqjd" path="res://snd/music/test.wav" id="5_4kq1b"]
+
+[node name="TitleMenu" type="CanvasLayer" unique_id=1906355457]
+script = ExtResource("1_8obhb")
+StartingScene = "res://src/levels/test.tscn"
+
+[node name="TitleContainer" type="HBoxContainer" parent="." unique_id=1112268422]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="HeadingLabel" type="Label" parent="TitleContainer" unique_id=195303053]
+layout_mode = 2
+text = "Game Title"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="." unique_id=150799770]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="StartContainer" type="HBoxContainer" parent="ButtonContainer" unique_id=910173023]
+layout_mode = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="ButtonContainer/StartContainer" unique_id=683851302]
+layout_mode = 2
+text = "Start Game"
+
+[node name="ControlsContainer" type="HBoxContainer" parent="ButtonContainer" unique_id=144268108]
+layout_mode = 2
+alignment = 1
+
+[node name="ControlsButton" type="Button" parent="ButtonContainer/ControlsContainer" unique_id=210401620]
+layout_mode = 2
+text = "Controls"
+
+[node name="AudioContainer" type="HBoxContainer" parent="ButtonContainer" unique_id=1395847]
+layout_mode = 2
+alignment = 1
+
+[node name="AudioButton" type="Button" parent="ButtonContainer/AudioContainer" unique_id=1026113149]
+layout_mode = 2
+text = "Audio"
+
+[node name="AudioMenu" parent="." unique_id=1537966480 instance=ExtResource("2_7w2fj")]
+visible = false
+
+[node name="ControlMenu" parent="." unique_id=1116839675 instance=ExtResource("3_4bx7u")]
+visible = false
+
+[node name="MusicPlayer" parent="." unique_id=41362271 instance=ExtResource("4_watub")]
+stream = ExtResource("5_4kq1b")
